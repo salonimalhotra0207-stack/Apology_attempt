@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedika & Her Didi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-pink: #ffafbd;
+            --secondary-pink: #ffc3a0;
+            --glass: rgba(255, 255, 255, 0.25);
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary-pink), var(--secondary-pink));
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .swiper {
+            width: 340px;
+            height: 500px;
+        }
+
+        .swiper-slide {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid rgba(255,255,255,0.3);
+            text-align: center;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #d63384;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .tag {
+            background: #f8bbd0;
+            color: #880e4f;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin: 5px;
+            font-weight: bold;
+        }
+
+        /* Decorative Background Circles */
+        .circle {
+            position: absolute;
+            z-index: -1;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="circle" style="width: 200px; height: 200px; top: -50px; left: -50px;"></div>
+    <div class="circle" style="width: 150px; height: 150px; bottom: -30px; right: -30px;"></div>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000" alt="Sisterhood" class="card-image">
+                <h1>Vedika's Fav Didi</h1>
+                <p>Celebrating a bond that's more than just words. No jealousy, just pure love for the family you chose.</p>
+                <div class="tag">Sisterly Love</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=1000" alt="Blueberry Cheesecake" class="card-image">
+                <h1>Sweetest Commonality</h1>
+                <p>Bonded by the love for <b>Blueberry Cheesecake</b> and deep-rooted <b>Gadhwaali Pahadi</b> vibes!</p>
+                <div class="tag">#PahadiPower</div>
+                <div class="tag">#CheesecakeLovers</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000" alt="Friendship" class="card-image">
+                <h1>Twinnings</h1>
+                <p>It’s crazy how similar your relationships are. She might be a bit like me, and that's why she's perfect as your sister.</p>
+                <div class="tag">Similar Souls</div>
+            </div>
+
+            <div class="swiper-slide">
+                <h1>A Note from Me</h1>
+                <p>I'm sorry for being petty before. I've realized how lucky you are to have her, and I'm happy she's in our lives.</p>
+                <p style="font-family: 'Dancing Script', cursive; font-size: 1.5rem; color: #d63384;">Always supporting you.</p>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cards",
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+    </script>
+</body>
+</html>
